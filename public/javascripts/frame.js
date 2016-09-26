@@ -134,9 +134,3 @@ var canvas = new LHCanvas();
 setInterval(function () {
   canvas.render();
 }, 10);
-
-// function animationLoop () {
-//   canvas.render();
-//   requestAnimationFrame(animationLoop);
-// }
-// animationLoop();
