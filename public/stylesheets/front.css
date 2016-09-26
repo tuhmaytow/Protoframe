@@ -23,19 +23,19 @@
   text-align: center;
   align-items: center;
   padding: 13px 15px 10px;
-  margin-right: 280px;
-  margin-bottom: 240px;
+  margin-right: 300px;
+  margin-bottom: 290px;
   border: none;
   cursor: pointer;
 }
 
 
 #animated-example {
-  font: 700 30px Lato, arial, helvetica, sans-serif;
+  font: 700 45px Lato, arial, helvetica, sans-serif;
   color: #5D5F71;
   float: right;
   margin-top: 250px;
-  margin-right: 200px;
+  margin-right: 145px;
 }
 
 .animated {
