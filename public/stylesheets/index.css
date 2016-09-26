@@ -5,6 +5,10 @@ body {
 canvas {
   border: 3px solid #9AA5A8;
   background-color: white;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
 }
 
 .container {
