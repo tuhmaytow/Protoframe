@@ -1,6 +1,7 @@
 .parallax {
   height: 100vh;
   width: 100%;
+  position: relative;
   background-color: #C4CBCA;
   background-attachment: scroll; /*fixed: image scrolls; scroll: image stays*/
   background-position: center;
@@ -8,27 +9,33 @@
   background-size: cover;
 }
 
-.parallax .button {
+.create {
   background-color: #a4cdd1;
-  color: white;
   min-width: 214px;
   border: none;
   height: 43px;
   display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right:0;
   font: 700 15px Lato, arial, helvetica, sans-serif;
   text-transform: uppercase;
   text-align: center;
+  align-items: center;
   padding: 13px 15px 10px;
+  margin-right: 280px;
+  margin-bottom: 240px;
   border: none;
   cursor: pointer;
 }
+
 
 #animated-example {
   font: 700 30px Lato, arial, helvetica, sans-serif;
   color: #5D5F71;
   float: right;
-  margin-top: 80px;
-  margin-right: 20px;
+  margin-top: 250px;
+  margin-right: 200px;
 }
 
 .animated {
