@@ -2,31 +2,13 @@ body {
   background-color: #474f5f;
 }
 
-#myCanvas {
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin-top: 80px;
-  margin-right: auto;
-  margin-left: auto;
-  width: 800px;
-  height: 550px;
-  background-color: #FFFCFF;
-  position: absolute;
-};
+canvas {
+  border: 3px solid #9AA5A8;
+  background-color: white;
+}
 
-.button {
-  background-color: #474f5f;
-  color: white;
-  min-width: 214px;
-  border: none;
-  height: 43px;
-  display: inline-block;
-  font: 700 15px Lato, arial, helvetica, sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 13px 15px 10px;
-  border: none;
-  cursor: pointer;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
