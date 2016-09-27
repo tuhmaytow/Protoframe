@@ -58,3 +58,178 @@
 .animated.lightSpeedIn {
   animation-duration: 1s;
 }
+
+#logbox {
+  background-color: #fff;
+  box-shadow: 0 0 1em #000;
+  display: none;
+  float: none;
+  height: 450px;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -225px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  vertical-align: middle;
+  width: 500px;
+  z-index: 1;
+}
+
+#loginbox {
+  background-color: #fff;
+  box-shadow: 0 0 1em #000;
+  display: none;
+  float: none;
+  height: 380px;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -190px;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  vertical-align: middle;
+  width: 500px;
+  z-index: 1;
+}
+
+form#signup {
+  text-align: center;
+}
+
+form#signin {
+  text-align: center;
+}
+
+/*h1 {
+  text-align: center;
+  font-size: 175%;
+  color: #527787;
+  font-weight: 300;
+}
+
+h1, input {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}*/
+
+.input {
+  width: 75%;
+  height: 45px;
+  display: block;
+  margin: 0 auto 15px;
+  padding: 0 15px;
+  border: none;
+  border-bottom: 2px solid #ebebeb;
+}
+.input:focus {
+  outline: none;
+  border-bottom-color: #a4cdd1 !important;
+}
+.input:hover {
+  border-bottom-color: #a4cdd1;
+}
+.input:invalid {
+  box-shadow: none;
+}
+
+.pass:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+.inputButton {
+  position: relative;
+  width: 85%;
+  height: 50px;
+  display: block;
+  margin: 30px auto 30px;
+  color: #fff;
+  background-color: #474f5f;
+  border: none;
+  -webkit-box-shadow: 0 5px 0 #a4cdd1;
+  -moz-box-shadow: 0 5px 0 #a4cdd1;
+  box-shadow: 0 5px 0 #a4cdd1;
+}
+.inputButton:hover {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 #2CADAD;
+  -moz-box-shadow: 0 3px 0 #2CADAD;
+  box-shadow: 0 3px 0 #2CADAD;
+}
+.inputButton:active {
+  top: 5px;
+  box-shadow: none;
+}
+.inputButton:focus {
+  outline: none;
+}
+
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+
+.loginBtn:focus {
+  outline: none;
+}
+
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+.loginBtn--google {
+  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+  background: #DD4B39;
+}
+
+.loginBtn--google:before {
+  border-right: #BB3F30 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+
+.loginBtn--google:hover, .loginBtn--google:focus {
+  background: #E74B37;
+}
+
+#cancel-sign-up, #cancel-login {
+  font-size: 24px;
+  position: absolute;
+  right: 15px;
+  top: 6px;
+}
+
+#cancel-sign-up:hover, #cancel-login:hover, #login-btn:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.warning {
+  margin-top: 15px;
+  color: red;
+}
+
+.events-box {
+  margin: 25px auto;
+}
+
+#google-signup, #google-login {
+  text-align: center;
+}

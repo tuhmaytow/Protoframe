@@ -1,12 +1,15 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var knex = require('./db/knex');
+var cookieParser = require('cookie-parser');
+var cookieSession = require('cookie-session');
 var routes = require('./routes/index');
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'html');
 
-
+app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

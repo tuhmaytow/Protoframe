@@ -4,18 +4,38 @@
     <meta charset="utf-8">
     <title>front page</title>
     <link rel="stylesheet" href="/stylesheets/front.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
   	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Raleway">
   	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow">
+      <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="parallax">
       <div class="iconDash" style="height: 60px; width: 100%; position: fixed; top: 0; left: 0; z-index: 99; min-width: 1250px;">
-        <a href="#" class="button" style="background-color:#474f5f; color:white; margin-right:30px; margin-top:9px; float:right; font:15px Lato, arial, helvetica, sans-serif; text-transform:uppercase; text-align:center; padding:12px 15px; cursor:pointer;">SignUp</a>
-        <a href="#" class="button" style="background-color:#474f5f; color:white; margin-right:30px; margin-top:9px; float:right; font:15px Lato, arial, helvetica, sans-serif; text-transform:uppercase; text-align:center; padding:12px 15px; cursor:pointer;">LogIn</a>
+        <a href="#" method="POST" class="button" id="signupButton" style="background-color:#474f5f; color:white; margin-right:30px; margin-top:9px; float:right; font:15px Lato, arial, helvetica, sans-serif; text-transform:uppercase; text-align:center; padding:12px 15px; cursor:pointer;">SignUp</a>
+        <a href="#" method="POST" class="button" id="loginButton" style="background-color:#474f5f; color:white; margin-right:30px; margin-top:9px; float:right; font:15px Lato, arial, helvetica, sans-serif; text-transform:uppercase; text-align:center; padding:12px 15px; cursor:pointer;">LogIn</a>
+      </div>
+      <div id="logbox">
+      <form id="signup" method="POST" action="/signup">
+        <h1>create an account</h1>
+        <input name="username" type="text" placeholder="What's your username?" autofocus="autofocus" required="required" class="input pass">
+        <input name="email" type="email" placeholder="Email address" class="input pass">
+        <input name="password" type="password" placeholder="Choose a password" required="required" class="input pass">
+        <input name="password2" type="password" placeholder="Confirm password" required="required" class="input pass">
+        <input type="submit" value="Sign me up!" class="inputButton">
+      </form>
+      </div>
+      <div id="loginbox">
+        <form id="signin" method="POST" action="/login"><a id="cancel-login">X</a>
+          <h1>Log In</h1>
+          <input id="username" name="username" type="text" placeholder="Username" required="required" class="input pass"/>
+          <input name="password" type="password" placeholder="Password" required="required" class="input pass"/>
+          <input type="submit" value="Log in!" class="inputButton"/>
+        </form>
       </div>
       <div id="animated-example" class="animated lightSpeedIn">
         <p>PROTOFRAME,</p>
@@ -28,5 +48,26 @@
         <a href="/views/index.html" class="button" style="color:white;" method="GET">START CREATING</a>
       </div>
     </div>
+    <script>
+    $("#signupButton").on("click", function() {
+      if($("#logbox").css('display') === 'none') {
+        $("#logbox").css('display', 'block');
+      } else {
+        $("#logbox").css('display', 'none');
+      }
+    });
+
+    $("#loginButton").on("click", function() {
+      if($("#loginbox").css('display') === 'none') {
+        $("#loginbox").css('display', 'block');
+      } else {
+        $("#loginbox").css('display', 'none');
+      }
+    });
+
+    $("#cancel-login").on("click", function() {
+
+    });
+    </script>
   </body>
 </html>
