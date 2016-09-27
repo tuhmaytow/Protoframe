@@ -85,26 +85,6 @@ class LHCanvas {
   });
 }
 
-//window.open(canvas.toDataURL("image/png"));
-
-var w = window.open('about:blank','image from canvas');
-w.document.write("<img src='"+canvas.toDataURL("image/png")+"' alt='from canvas'/>");
-
-downloadURI(uri, name) {
-  var link = document.createElement("a");
-  link.imageSaved = name;
-  link.href = uri;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  delete link.href;
-}
-
-this.canvas.addEventListener("click", (event) => {
-  downloadURI("data:uri", "imagesaved.png");
-});
-
-
 makeGrid() {
   this.ctx.strokeStyle = "#DEE0DF";
   for (var x = 0.5; x < 1000; x += 18) { //vertical
