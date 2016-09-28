@@ -9,5 +9,6 @@ CREATE TABLE users(
 
 CREATE TABLE images(
   id SERIAL PRIMARY KEY,
-  user_id INTEGER REFERENCES users(id)
+  user_id INTEGER REFERENCES users(id),
+  image_json TEXT
 );

@@ -83,6 +83,10 @@ class LHCanvas {
       }
     }
   });
+
+  document.getElementById("btn-download").addEventListener("click",(event) => {
+    this.serialize();
+  });
 }
 
 makeGrid() {
@@ -111,6 +115,26 @@ render() {
 
 addNewSprite(sprite) {
   this.visibleElements.push(sprite);
+}
+
+serialize() {
+  for(var i = 0; i < this.visibleElements.length; i++)  {
+    let newObj = {
+      img: this.visibleElements[i].img.src,
+      height: this.visibleElements[i].img.height,
+      width: this.visibleElements[i].img.width,
+      x: this.visibleElements[i].img.x,
+      y: this.visibleElements[i].img.y
+    };
+    JSON.stringify(newObj);
+    }
+}
+
+deSerialize() {
+  var deSerializeSprite = new Sprite(newObj.img, newObj.height, newObj.width, newObj.x, newObj.y);
+  console.log(deSerializeSprite,"deSerialize");
+
+
 }
 }
 
