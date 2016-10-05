@@ -3,11 +3,9 @@
 module.exports = {
 
   development: {
-  client: 'postgresql',
-  connection: {
-    database: 'image_saved'
-  },
-  debug: true
+    client: 'postgresql',
+    connection: 'postgres://localhost:5432/image_saved',
+    debug: true
 },
 
   staging: {

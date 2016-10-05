@@ -9,10 +9,18 @@ var routes = require('./routes/index');
 var userRoutes = require('./routes/users');
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.set('view engine', 'html');
+// app.set('view engine', 'html');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
+app.use(cookieSession({
+  name: 'session',
+  keys: [
+    "Hello",
+    "Bye",
+    "Hi"
+  ]}));
 app.use('/', routes);
 app.use('/users', userRoutes);
 
