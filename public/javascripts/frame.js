@@ -84,9 +84,30 @@ class LHCanvas {
     }
   });
 
-  document.getElementById("btn-download").addEventListener("click",(event) => {
-    this.serialize();
+  document.getElementById("btn-save").addEventListener("click",(event) => {
+    console.log(this.serialize(), "serialize");
+    $.ajax({
+    url: '/users/save',
+    method: "POST",
+    data: this.serialize(),
+    success: function(data) {
+        console.log(data);
+
+      }
+    });
   });
+
+  document.getElementById("btn-load").addEventListener("click",(event) => {
+    this.deSerialize();
+  });
+  $.ajax({
+  url: '/users/:id',
+  method: "GET",
+  data: this.deSerialize(),
+  success: function(data) {
+    console.log(data);
+  }
+});
 }
 
 makeGrid() {
@@ -118,6 +139,7 @@ addNewSprite(sprite) {
 }
 
 serialize() {
+  let savedSession = [];
   for(var i = 0; i < this.visibleElements.length; i++)  {
     let newObj = {
       img: this.visibleElements[i].img.src,
@@ -126,15 +148,19 @@ serialize() {
       x: this.visibleElements[i].img.x,
       y: this.visibleElements[i].img.y
     };
-    JSON.stringify(newObj);
-    }
+    savedSession.push(newObj);
+  }
+  let jsonSavedSession = JSON.stringify(savedSession);
+  return jsonSavedSession;
 }
 
-deSerialize() {
-  var deSerializeSprite = new Sprite(newObj.img, newObj.height, newObj.width, newObj.x, newObj.y);
-  console.log(deSerializeSprite,"deSerialize");
-
-
+deSerialize(jsonString) {
+  let loadedSession = JSON.parse(jsonString);
+  this.ctx.clearRect(0, 0, this.width, this.height);
+  loadedSession.forEach((obj) => {
+    var deSerializeSprite = new Sprite(obj.img, obj.height, obj.width, obj.x, obj.y);
+    deSerializeSprite.render(this.ctx);
+  });
 }
 }
 
