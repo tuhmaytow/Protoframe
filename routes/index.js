@@ -30,8 +30,6 @@ router.post('/signup', function(req, res, next) {
       .returning('*')
       .then(function(newUser) {
         req.session.user = newUser[0].id;
-        req.session.username = newUser[0].username;
-        console.log('account created!')
         res.redirect('/users/' + req.session.user);
       });
     }
@@ -40,10 +38,6 @@ router.post('/signup', function(req, res, next) {
   res.send("Passwords do not match.");
 }
 });
-
-// router.get('/login', function(req, res, next) {
-//   console.log('yeah!');
-// });
 
 router.post('/login', function(req, res, next) {
   knex('users')

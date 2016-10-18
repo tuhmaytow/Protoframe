@@ -14,10 +14,12 @@ router.get('/:userId', function(req, res, next) {
   }
 });
 
-router.post('/save', function(req, res, next) {
-  let userId = req.params.id;
-  // let sessionString = req.body.something;
-  console.log(req.body, "req");
+router.post('/:userId/save', function(req, res, next) {
+  let userId = req.params.userId;
+  let sessionString = req.body.savedSession;
+
+  knex('images').insert({json: sessionString, userId: })
+  .then()
   // knex stuff to save the session
     // if save sucessful
       res.sendStatus(200);

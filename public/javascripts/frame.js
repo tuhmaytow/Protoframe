@@ -86,8 +86,9 @@ class LHCanvas {
 
   document.getElementById("btn-save").addEventListener("click",(event) => {
     console.log(this.serialize(), "serialize");
+    //TODO: Actually get real user id
     $.ajax({
-    url: '/users/save',
+    url: '/'+ 1 +'/save',
     method: "POST",
     data: this.serialize(),
     success: function(data) {
@@ -97,17 +98,17 @@ class LHCanvas {
     });
   });
 
-  document.getElementById("btn-load").addEventListener("click",(event) => {
-    this.deSerialize();
-  });
-  $.ajax({
-  url: '/users/:id',
-  method: "GET",
-  data: this.deSerialize(),
-  success: function(data) {
-    console.log(data);
-  }
-});
+//   document.getElementById("btn-load").addEventListener("click",(event) => {
+//     // this.deSerialize();
+//   });
+//   $.ajax({
+//   url: '/users/:userId',
+//   method: "GET",
+//   data: this.deSerialize(),
+//   success: function(jsonString) {
+//     console.log(jsonString);
+//   }
+// });
 }
 
 makeGrid() {
