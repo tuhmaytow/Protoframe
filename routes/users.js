@@ -18,8 +18,8 @@ router.post('/:userId/save', function(req, res, next) {
   let userId = req.params.userId;
   let sessionString = req.body.savedSession;
 
-  knex('images').insert({json: sessionString, userId: })
-  .then()
+  knex('images').insert({json: sessionString, userId: 1});
+
   // knex stuff to save the session
     // if save sucessful
       res.sendStatus(200);
