@@ -84,19 +84,19 @@ class LHCanvas {
     }
   });
 
-  document.getElementById("btn-save").addEventListener("click",(event) => {
-    console.log(this.serialize(), "serialize");
-    //TODO: Actually get real user id
-    $.ajax({
-    url: '/'+ 1 +'/save',
-    method: "POST",
-    data: this.serialize(),
-    success: function(data) {
-        console.log(data);
-
-      }
-    });
-  });
+  // document.getElementById("btn-save").addEventListener("click",(event) => {
+  //   console.log(this.serialize(), "serialize");
+  //   //TODO: Actually get real user id
+  //   $.ajax({
+  //   url: '/'+ 1 +'/save',
+  //   method: "POST",
+  //   data: this.serialize(),
+  //   success: function(data) {
+  //       console.log(data);
+  //
+  //     }
+  //   });
+  // });
 
 //   document.getElementById("btn-load").addEventListener("click",(event) => {
 //     // this.deSerialize();
