@@ -14,18 +14,18 @@ router.get('/:userId', function(req, res, next) {
   }
 });
 
-router.post('/:userId/save', function(req, res, next) {
-  let userId = req.params.userId;
-  let sessionString = req.body.savedSession;
-
-  knex('images').insert({json: sessionString, userId: 1});
-
-  // knex stuff to save the session
-    // if save sucessful
-      res.sendStatus(200);
-    // if unsuccessful
-      res.sendStatus(500);
-
-});
+// router.post('/:userId/save', function(req, res, next) {
+//   let userId = req.params.userId;
+//   let sessionString = req.body.savedSession;
+//
+//   knex('images').insert({json: sessionString, userId: 1});
+//
+//   // knex stuff to save the session
+//     // if save sucessful
+//       res.sendStatus(200);
+//     // if unsuccessful
+//       res.sendStatus(500);
+//
+// });
 
 module.exports = router;
