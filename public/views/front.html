@@ -29,14 +29,31 @@
         <input type="submit" value="Sign me up!" class="inputButton">
       </form>
       </div>
-      <div id="loginbox">
+      <!-- <div id="loginbox">
         <form id="signin" method="POST" action="/login"><a id="cancel-login">X</a>
           <h1>Log In</h1>
           <input id="username" name="username" type="text" placeholder="Username" required="required" class="input pass"/>
           <input name="password" type="password" placeholder="Password" required="required" class="input pass"/>
           <input type="submit" value="Log in!" class="inputButton"/>
         </form>
-      </div>
+      </div> -->
+
+      <div id="logbox" class="hidden">
+            <form id="signup" method="POST" action="/signup"><a id="cancel-sign-up">X</a>
+              <h1>create an account</h1>
+              <input id="firstname" name="firstname" type="text" placeholder="First name" autofocus="autofocus" required class="input pass">
+              <input name="lastname" type="text" placeholder="Last name" required class="input pass">
+              <input name="username" type="text" placeholder="What's your username?" required class="input pass">
+              <input name="email" type="email" placeholder="Email address" required class="input pass">
+              <input name="password" type="password" placeholder="Choose a password" required class="input pass">
+              <input name="password2" type="password" placeholder="Confirm password" required class="input pass">
+              <input type="submit" value="Sign me up!" class="inputButton">
+            </form>
+            <form id="google-signup" action="/auth/google" method="GET">
+              <button type="submit" class="loginBtn loginBtn--google">Sign up with Google</button>
+            </form>
+          </div>
+
       <div id="animated-example" class="animated lightSpeedIn">
         <p>PROTOFRAME,</p>
         <p>A WIREFRAMING TOOL</p>
@@ -49,26 +66,26 @@
       </div>
     </div>
     <script>
-    $("#signupButton").on("click", function() {
-      if($("#logbox").css('display') === 'none') {
-        $("#logbox").css('display', 'block');
-      } else {
-        $("#logbox").css('display', 'none');
-      }
-    });
-
-    $("#loginButton").on("click", function() {
-      if($("#loginbox").css('display') === 'none') {
-        $("#loginbox").css('display', 'block');
-      } else {
-        $("#loginbox").css('display', 'none');
-      }
-    });
-
-    $("#cancel-login").on("click", function() {
-  
-
-      });
+    // $("#signupButton").on("click", function() {
+    //   if($("#logbox").css('display') === 'none') {
+    //     $("#logbox").css('display', 'block');
+    //   } else {
+    //     $("#logbox").css('display', 'none');
+    //   }
+    // });
+    //
+    // $("#loginButton").on("click", function() {
+    //   if($("#loginbox").css('display') === 'none') {
+    //     $("#loginbox").css('display', 'block');
+    //   } else {
+    //     $("#loginbox").css('display', 'none');
+    //   }
+    // });
+    //
+    // $("#cancel-login").on("click", function() {
+    //
+    //
+    //   });
 
 
 
