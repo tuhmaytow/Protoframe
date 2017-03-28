@@ -22,3 +22,7 @@ One of the biggest challenges I encountered when building this project was how t
 * CSS
 * PostgreSQL
 * Node.js & Express
+
+#Things to work on/improve
+* Have Login and Signup up and runnning
+* Have "Save" button working and be able to save wireframes
