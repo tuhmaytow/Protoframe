@@ -4,7 +4,7 @@ A tool that enables designers and developers to envision how their web applicati
 # Description
 A click-and-drop app where the user can grab an image from the selection of images on the navbar, and drop it on the canvas. Once images are placed on the canvas, it can be dragged and resize as the user pleases.
 
-The user has the option to login and signup to access their saved templates or they can simply start creating their template without the hassle of logging in/signing up, but won't be able to save their works.
+The user has the option to login and signup to access their saved templates or they can simply start creating their template without the hassle of logging in/signing up, but won't be able to save their works. (At its current state, users will not yet be able to login and signup as it is still in the works same as with the save button.)
 
 <img width="1440" alt="screen shot 2016-10-02 at 1 19 57 pm" src="https://cloud.githubusercontent.com/assets/16325330/19023517/9ecc986e-88a4-11e6-92c8-09fee04d4dc5.png">
 
